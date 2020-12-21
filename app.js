@@ -44,12 +44,14 @@ function coordCompare(){
         console.log(firstCoord);
         firstInput.style.border = '2px solid #12EA83';
         firstInput.style.background = '#CFFFE8';
+        secondInput.style.background = 'white';
         secondInput.style.border = '1px solid #b1b1b1';
 
     }else{
         console.log(secondCoord);
         secondInput.style.border = '2px solid #12EA83';
         secondInput.style.background = '#CFFFE8';
+        firstInput.style.background = 'white';
         firstInput.style.border = '1px solid #b1b1b1';
     }
 }
