@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/d30e230062.js" crossorigin="anonymous"></script>
+    <title>My geocoding app</title>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="logo-wrapper">
+            <img src="./assets/logo.png" alt="" width="200px" height="auto">
+        </div>
+        <div class="form-wrapper">
+            <h3 class="input-label">הכניסו מקום</h3>
+                <input type="text" class="form_input" id="first-input" autofocus=true>
+                <p class="latText" id="first-lat"></p>
+            
+            <h3 class="input-label">ועוד אחד</h3>
+                <input type="text" class="form_input" id="second-input">
+                <p class="latText" id="second-lat"></p>
+            <br>
+            <button type="submit" class="form-button" id="submit-button">מה יותר צפוני?</button>
+            <div class="reset">
+                <h3 id="reset-button">מהתחלה</h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js">
+    </script>
+</body>
+</html>
