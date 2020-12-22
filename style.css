@@ -16,6 +16,18 @@ body {
     justify-content: center;
 }
 
+.logo-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}
+
+#logo-image {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
 
 .input-label {
     font-size: 1rem;
@@ -25,9 +37,9 @@ body {
 .form-wrapper {
     display:flex;
     flex-direction: column;
-    width: 33%;
+    width: 90vw;
     max-width: 500px;
-    min-width: 320px;
+    /* min-width: 320px; */
 }
 
 .input-wrapper {
@@ -35,23 +47,13 @@ body {
     position: relative;
 }
 
-.check {
-    padding: 12px;
-    font-size: 1.5em;
-    line-height: 1.5em;
-    color: white;
-    vertical-align: bottom;
-    position: absolute;
-    left:0;
-    top: 4px;
-}
 
 .form_input {
     appearance: none;
     color: #333;
-    font-size: 1.5rem;
+    font-size: 18px;
     font-family: assistant;
-    padding: 0.6em 2rem;
+    padding: 0.8em 0.8em;
     border-radius: 0.4rem;
     background-color: rgb(255, 255, 255);
     border: 1px solid #b1b1b1;
@@ -69,7 +71,7 @@ body {
   
   .form-button{
       padding: 1em 3em;
-      font-size: 24px;
+      font-size: 18px;
       border:none;
       background:rgb(58, 58, 189);
       color:white;
@@ -91,7 +93,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.1em;
+    font-size: 16px;
     font-family: assistant;
     color:#333333;
 
@@ -100,6 +102,7 @@ body {
   #reset-button {
       padding: 8px 16px;
       cursor: pointer;
+      font-size: 18px;
   }
 
   .latText {
