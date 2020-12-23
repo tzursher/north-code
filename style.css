@@ -99,12 +99,24 @@ body {
 
 }
 
-  #reset-button {
+#reset-button {
       padding: 8px 16px;
       cursor: pointer;
       font-size: 18px;
   }
 
-  .latText {
+.latText {
       text-align: end;
   }
+
+.pac-item {
+    direction: rtl;
+    padding: 8px;
+    text-align: right;
+}
+
+.pac-item-query {
+    /* margin-left:6px; */
+    font-size:14px;
+    font-family: 'Assistant', sans-serif;
+}

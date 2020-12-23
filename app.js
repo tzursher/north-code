@@ -10,6 +10,7 @@ let firstLat = document.querySelector('#first-lat');
 let secondLat = document.querySelector('#second-lat');
 
 
+
 button.addEventListener('click', async function(e){
     e.preventDefault();
         firstCoord = await geocode(firstInput.value);
@@ -54,4 +55,22 @@ function coordCompare(){
         firstInput.style.background = 'white';
         firstInput.style.border = '1px solid #b1b1b1';
     }
+}
+
+function initAutocomplete(){
+    let autocomplete;
+    let secondAutocomplete;
+    autocomplete = new google.maps.places.Autocomplete(
+        firstInput,
+        {
+            types: ['geocode']
+        }
+    );
+    secondAutocomplete = new google.maps.places.Autocomplete(
+        secondInput,
+        {
+            types: ['geocode']
+        }
+    );
+
 }
