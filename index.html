@@ -9,6 +9,9 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/d30e230062.js" crossorigin="anonymous"></script>
     <title>My geocoding app</title>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbmeWgXybiLCtV9zqe64CZNb7FA_fQ1js&libraries=places&language=he&callback=initAutocomplete">
+</script>
 </head>
 <body>
     <div class="content-wrapper">
@@ -16,12 +19,12 @@
             <img src="./assets/logo.png" alt="" id="logo-image">
         </div>
         <div class="form-wrapper">
-            <h3 class="input-label">הכניסו מקום</h3>
-                <input type="text" class="form_input" id="first-input" autofocus=true>
+            <!-- <h3 class="input-label">הכניסו מקום</h3> -->
+                <input type="text" placeholder="הכניסו מקום" class="form_input" id="first-input" autofocus=true>
                 <p class="latText" id="first-lat"></p>
             
-            <h3 class="input-label">ועוד אחד</h3>
-                <input type="text" class="form_input" id="second-input">
+            <!-- <h3 class="input-label">ועוד אחד</h3> -->
+                <input type="text" placeholder="ועוד אחד" class="form_input" id="second-input">
                 <p class="latText" id="second-lat"></p>
             <br>
             <button type="submit" class="form-button" id="submit-button">מה יותר צפוני?</button>
