@@ -28,15 +28,15 @@ resetButton.addEventListener('click', function(){
 });
 
 async function geocode(location){
-    const key = 'AIzaSyDbmeWgXybiLCtV9zqe64CZNb7FA_fQ1js';
+    const key = 'pk.eyJ1IjoidHp1ciIsImEiOiJja25leWQ1ZWQxdzVrMnhtcnl6aGp0YzVjIn0.6o1EExtf6USy-aQ80Ns0Rw';
     console.log(location);
-    const response = await axios.get('https://maps.googleapis.com/maps/api/geocode/json' ,{
-        params:{
-            address: location,
-            key: key
-        }
+    const response = await axios.get(`https://api.mapbox.com/geocoding/v5/mapbox.places/${location}.json?access_token=${key}` ,{
+        // params:{
+        //     location,
+        //     access_token: key
+        // }
     })
-    return response.data.results[0].geometry.location.lat;
+    return response.data.features[0].geometry.coordinates[1];
 }
 
 function coordCompare(){
@@ -57,20 +57,20 @@ function coordCompare(){
     }
 }
 
-function initAutocomplete(){
-    let autocomplete;
-    let secondAutocomplete;
-    autocomplete = new google.maps.places.Autocomplete(
-        firstInput,
-        {
-            types: ['geocode']
-        }
-    );
-    secondAutocomplete = new google.maps.places.Autocomplete(
-        secondInput,
-        {
-            types: ['geocode']
-        }
-    );
+// function initAutocomplete(){
+//     let autocomplete;
+//     let secondAutocomplete;
+//     autocomplete = new google.maps.places.Autocomplete(
+//         firstInput,
+//         {
+//             types: ['geocode']
+//         }
+//     );
+//     secondAutocomplete = new google.maps.places.Autocomplete(
+//         secondInput,
+//         {
+//             types: ['geocode']
+//         }
+//     );
 
-}
+// }
